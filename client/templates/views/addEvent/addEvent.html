@@ -1,0 +1,132 @@
+<template name="addEvent">
+{{#staggering}}
+<div class="content">
+
+
+	{{#panel title="Add Event"}}
+	<form method="get" class="form-horizontal">
+
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="eventName">Event
+				Name</label>
+
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="eventName"
+					name="eventName">
+			</div>
+		</div>
+
+<div class="form-group">
+			<label class="col-sm-2 control-label" for="eventDescription">Event
+				Description</label>
+
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="eventDescription"
+					name="eventDescription">
+			</div>
+		</div>
+		<div class="hr-line-dashed"></div>
+		
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="eventLocation">Event Location </label>
+			<div class="col-sm-10">
+				<select class="form-control m-b" id="eventLocation" name="eventLocation">
+				<option name="empty"> </option>
+					{{#each getPlaces}}
+					<option name={{this.name}}>{{this.name}}</option>
+					{{/each}}
+				</select>
+			</div>
+		</div>
+		
+
+				<div class="hr-line-dashed"></div>
+				<div class="form-group">
+				<label class="col-sm-2 control-label" for="eventStartTime">Event
+				Date</label>
+				<div class="col-sm-10">
+				 <div class="input-group datetimepicker" id="startTime">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    <input class="set-due-date form-control"  id="eventStartTime" type="text" name="eventStartTime"/>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="form-group">
+				<label class="col-sm-2 control-label" for="eventEndTime">Event
+				Date</label>
+				<div class="col-sm-10">
+				 <div class="input-group datetimepicker" id="endTime">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    <input class="set-due-date form-control"  id="eventEndTime" name="eventEndTime" type="text"/>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+			<label class="col-sm-2 control-label" for="eventAdmin">Event
+				Admin Email</label>
+
+			<div class="col-sm-10">
+				<input type="email" class="form-control" id="eventAdmin"
+					name="eventAdmin">
+			</div>
+		</div>
+		
+		
+		 <div class="form-group">
+			<label class="col-sm-2 control-label" for="eventURL">Event
+				URL</label>
+
+			<div class="col-sm-10">
+				<input type="url" class="form-control" id="eventURL"
+					name="eventURL" value="http://">
+			</div>
+		</div>
+		
+		
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="eventContactPhone">Event
+				Phone</label>
+
+			<div class="col-sm-10">
+				<input type="tel" class="form-control" id="eventContactPhone"
+					name="eventContactPhone" >
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="eventFree">  Event Free </label>
+			<div class="col-sm-10">
+				<input type="checkbox" value="" id = "eventFree" >
+			</div>
+			</div>
+		
+		
+		{{# if paid}}
+		<div class="form-group">
+			<label class="col-sm-2 control-label" for="eventEntranceFee">Entrance Fee</label>
+
+			<div class="col-sm-10">
+				<input type="number" class="form-control" id="eventEntranceFee"
+					name="eventEntranceFee" >
+			</div>
+		</div>
+		
+		{{/if}}
+		
+		
+		
+
+		<button class="btn btn-primary " id="addEventButton" type="button">
+			<i class="fa fa-check"></i> Submit
+		</button>
+
+
+	</form>
+	{{/panel}}
+
+</div>
+{{/staggering}}
+</template>

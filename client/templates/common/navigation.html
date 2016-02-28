@@ -1,0 +1,37 @@
+<template name="navigation">
+    <aside id="menu">
+        <div id="navigation">
+            <div class="profile-picture">
+                <a href="{{pathFor route='dashboard'}}">
+                    <img src="images/rsz_coexist.png" class="img-circle m-b" alt="logo">
+                </a>
+
+                <div class="stats-label text-color">
+                    <span class="font-extra-bold font-uppercase">Atitya</span>
+
+                    <div class="dropdown">
+                            <small class="text-muted">For all your Religious Needs </small>
+                        
+                    </div>
+
+
+                  
+                </div>
+            </div>
+
+            <ul class="nav" id="side-menu">
+                <li class="{{isActiveRoute regex='dashboard'}}">
+                    <a href="{{pathFor route='dashboard'}}"> <span class="nav-label">Dashboard</span> <span class="label label-success pull-right">v.1</span> </a>
+                </li>
+                <li class="{{isActiveRoute regex='addPlace'}}">
+                    <a href="{{pathFor route='addPlace'}}"> <span class="nav-label">Add Place</span> </a>
+                </li>
+                 <li class="{{isActiveRoute regex='addEvent'}}">
+                    <a href="{{pathFor route='addEvent'}}"> <span class="nav-label">Add Event</span></a>
+                </li>
+
+                
+            </ul>
+        </div>
+    </aside>
+</template>
