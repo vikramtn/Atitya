@@ -5,9 +5,9 @@ Session.set("isEventPaid",true);
 Template.addEvent.onRendered(function(){
     // Initialize the datepicker
 
-    $('#startTime').datetimepicker();
+    this.$('#startTime').datetimepicker();
     
-    $('#endTime').datetimepicker();
+    this.$('#endTime').datetimepicker();
     
 
     

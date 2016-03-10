@@ -100,8 +100,8 @@ Template.addPlace.events({
 
 		} else if($(event.target).prop("id")=="addWeekdaySchedule"){
 			var newSchedule = {};
-			newSchedule.openingTime= Template.instance().$('[name=weekDayPlaceOpeningTime]').val();
-			newSchedule.closingTime= Template.instance().$('[name=weekDayPlaceClosingTime]').val();
+			newSchedule.openingTime= Template.instance().$('[id=weekDayPlaceOpeningTime]').val();
+			newSchedule.closingTime= Template.instance().$('[id=weekDayPlaceClosingTime]').val();
 			var schedule =  Session.get("schedule");
 			schedule.weekDaySchedule.push(newSchedule);
 			Session.set("schedule",schedule);
