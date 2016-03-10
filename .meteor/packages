@@ -41,3 +41,5 @@ zimme:iron-router-active
 
 npm-container
 service-configuration
+dburles:google-maps
+mdg:geolocation
