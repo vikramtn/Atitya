@@ -44,3 +44,7 @@ service-configuration
 dburles:google-maps
 mdg:geolocation
 tsega:bootstrap3-datetimepicker
+accounts-base
+accounts-password
+accounts-ui
+aldeed:geocoder

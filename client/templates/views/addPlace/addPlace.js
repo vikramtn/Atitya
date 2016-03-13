@@ -92,8 +92,15 @@ Template.addPlace.events({
 			 var nearbyPlaces= Template.instance().$('[name=nearbyPlaces]').val();
 			var placeMediaUploads= Template.instance().$('[name=placeMediaUploads]').val();
 			var relatedPlaces= Template.instance().$('[name=relatedPlaces]').val();
-			var place = new Place(placeName, placeType, placeSubType, placeAddress, Session.get("schedule"),null , relatedPlaces, nearbyPlaces, placeMediaUploads,Meteor.user());
-			Places.insert(place);
+			Meteor.call('getLatLong',placeAddress, function(error, result){
+				var latLong = {};
+				latLong.latitude = result[0].latitude;
+				latLong.longitude = result[0].longitude;
+
+				var place = new Place(placeName, placeType, placeSubType, placeAddress, Session.get("schedule"),null , relatedPlaces, nearbyPlaces, placeMediaUploads,Meteor.user(),latLong);
+				Places.insert(place);
+			} );
+			
 
 
 			

@@ -8,7 +8,7 @@ Router.configure({
 //
 
 Router.route('/', function () {
-    Router.go('dashboard');
+    Router.go('login');
 });
 
 Router.route('/dashboard', function () {

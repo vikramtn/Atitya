@@ -1,18 +1,40 @@
 <template name="dashboard">
-{{#staggering}}
-<div class="content" itemscope
-	itemtype="http://schema.org/PlaceOfWorship">
+
+    {{#staggering}}
+
+        <div class="content">
+
+           
+
+          <div class="row">
+                <div class="col-lg-6">
+                    <div class="hpanel">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-1">Your Events</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-2">Around you</a></li>
+                            
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                            <div id="mymap" style="height: 700px"></div>
+
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                            <div id="aroundMap" style="height: 500px"></div>
+                                
+                            </div>
+                            
+                          
+                        </div>
+                        
 
 
-	{{#panel title="Add Place"}}
-	<div class="map-container">
-    {{> googleMap name="exampleMap" options=exampleMapOptions}}
-  </div>
-	{{/panel}}
-
-</div>
-{{/staggering}}
+                    </div>
+                </div>
+                
+            </div>
+          
+            
+        </div>
+    {{/staggering}}
 </template>
-
-
-

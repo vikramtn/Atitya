@@ -7,3 +7,25 @@ Template.register.onRendered(function(){
     });
 
 });
+
+
+Template.register.events({
+	'click button': function(event){
+		event.preventDefault();
+		if($(event.target).prop("name")=="register"){
+
+			 var username = $('[id=username]').val();
+		      var password = $('[id=password]').val();
+		      var email = $('[id=useremail]').val();
+		      Accounts.createUser({
+		    	  username:username,
+		            email: email,
+		            password: password
+		        });
+		      
+		        Router.go('login');
+
+		}
+
+	}
+});

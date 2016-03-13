@@ -1,8 +1,6 @@
 <template name="login">
 
-    <div class="back-link">
-        <a href="{{pathFor route='dashboard'}}" class="btn btn-primary">Back to Dashboard</a>
-    </div>
+   
 
     <div class="login-container">
         <div class="row">
@@ -22,15 +20,15 @@
                             <div class="form-group">
                                 <label class="control-label" for="password">Password</label>
                                 <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
-                                <span class="help-block small">Yur strong password</span>
+                                <span class="help-block small">Your strong password</span>
                             </div>
                             <div class="checkbox">
                                 <input type="checkbox" class="i-checks" checked>
                                 Remember login
                                 <p class="help-block small">(if this is a private computer)</p>
                             </div>
-                            <button class="btn btn-success btn-block">Login</button>
-                            <a class="btn btn-default btn-block" href="#">Register</a>
+                            <button class="btn btn-success btn-block" id="login">Login</button>
+                             <a href="{{pathFor route='register'}}" class="btn btn-default btn-block" id="register">Register</a>
                         </form>
                     </div>
                 </div>
