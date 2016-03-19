@@ -5,7 +5,9 @@
 
 
 	{{#panel title="Add Place"}}
-	<form method="get" class="form-horizontal">
+	  {{> quickForm collection="Places" id="insertPlaceForm" type="insert"}}
+	
+	<!-- <form method="get" class="form-horizontal">
 
 		<div class="form-group">
 			<label class="col-sm-2 control-label" for="placeName">Place
@@ -320,9 +322,9 @@
 						data-target="#addSchedule">Add Schedule</button>
 				</span> <select multiple="multiple"
 					style="width: 100%" id="weekDaySchedule" name="weekDaySchedule">
-					<!-- {{#each weekDaySchedule}}
+					{{#each weekDaySchedule}}
 					<option selected>{{this.openingTime}} to {{this.closingTime}}</option> 
-					{{/each}} -->
+					{{/each}}
 					</select>
 				<div class="modal fade" id="addSchedule" tabindex="-1" role="dialog"
 					aria-hidden="true">
@@ -367,9 +369,9 @@
 						data-target="#addSWeekendchedule">Add Schedule</button>
 				</span> <select multiple="multiple"
 					style="width: 100%" id="weekEndSchedule" name="weekEndSchedule">
-					<!-- {{#each weekDaySchedule}}
+					{{#each weekDaySchedule}}
 					<option selected>{{this.openingTime}} to {{this.closingTime}}</option> 
-					{{/each}} -->
+					{{/each}}
 					</select>
 				<div class="modal fade" id="addSWeekendchedule" tabindex="-1" role="dialog"
 					aria-hidden="true">
@@ -437,7 +439,7 @@
 		</button>
 
 
-	</form>
+	</form> -->
 	{{/panel}}
 
 </div>

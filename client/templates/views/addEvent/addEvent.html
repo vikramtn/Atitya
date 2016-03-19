@@ -4,7 +4,10 @@
 
 
 	{{#panel title="Add Event"}}
-	<form method="get" class="form-horizontal">
+	
+		  {{> quickForm collection="Events" id="insertEventForm" type="insert"}}
+		  
+	<!-- <form method="get" class="form-horizontal">
 
 		<div class="form-group">
 			<label class="col-sm-2 control-label" for="eventName">Event
@@ -124,7 +127,7 @@
 		</button>
 
 
-	</form>
+	</form> -->
 	{{/panel}}
 
 </div>

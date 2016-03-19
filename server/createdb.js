@@ -26,3 +26,17 @@ insertReligionData= function(){
 
 
 
+extendProfileSchema = function(){
+    Profile.appendSchema({
+        "interestedPlaces":{
+            type:String,
+            required: true
+        },
+        "attendingEvents":{
+            type:String,
+            required: true
+        }
+        
+    })
+}
+
